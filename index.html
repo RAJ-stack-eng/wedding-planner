@@ -436,6 +436,29 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+emailjs.init("KAQAf15nbKfXaL_yJ");
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm(
+        "service_exlm95b",
+        "template_imp4krp",
+        this
+    )
+    .then(function() {
+        alert("Inquiry sent successfully!");
+        document.getElementById("contactForm").reset();
+    })
+    .catch(function(error) {
+        alert("Failed to send inquiry.");
+        console.log(error);
+    });
+});
+</script>
 
 </body>
 
