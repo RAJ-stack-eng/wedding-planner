@@ -1,20 +1,40 @@
-// Contact Form Submission
+emailjs.init("KAQAf15nbKfXaL_yJ");
 
 const contactForm = document.getElementById("contactForm");
 
 if (contactForm) {
+
     contactForm.addEventListener("submit", function (e) {
+
         e.preventDefault();
 
-        const formContainer = contactForm.parentElement;
-        formContainer.innerHTML = `
-            <div class="form-success-card">
-                <i class="fas fa-check-circle success-icon"></i>
-                <h3>Inquiry Received!</h3>
-                <p>Thank you for reaching out to Forever Moments. Our planners will review your request and get in touch within 24 hours.</p>
-            </div>
-        `;
+        emailjs.sendForm(
+            "service_exlm95b",
+            "template_imp4krp",
+            this
+        )
+        .then(() => {
+
+            const formContainer = contactForm.parentElement;
+
+            formContainer.innerHTML = `
+                <div class="form-success-card">
+                    <i class="fas fa-check-circle success-icon"></i>
+                    <h3>Inquiry Received!</h3>
+                    <p>Thank you for reaching out to Forever Moments. Our planners will contact you soon.</p>
+                </div>
+            `;
+
+        })
+        .catch((error) => {
+
+            console.log(error);
+            alert("Email failed to send");
+
+        });
+
     });
+
 }
 
 // Booking Form Submission in Modal

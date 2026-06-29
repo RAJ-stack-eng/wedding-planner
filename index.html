@@ -349,19 +349,34 @@
             </div>
 
             <div class="contact-form-container">
-                <form id="contactForm">
+              <form id="contactForm">
 
-                    <input type="text" placeholder="Your Name" required>
+    <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        required
+    >
 
-                    <input type="email" placeholder="Your Email" required>
+    <input
+        type="email"
+        name="email"
+        placeholder="Your Email"
+        required
+    >
 
-                    <textarea rows="6" placeholder="Tell us about your wedding" required></textarea>
+    <textarea
+        name="message"
+        rows="6"
+        placeholder="Tell us about your wedding"
+        required
+    ></textarea>
 
-                    <button type="submit">
-                        Send Inquiry
-                    </button>
+    <button type="submit">
+        Send Inquiry
+    </button>
 
-                </form>
+</form>
             </div>
         </div>
 
@@ -379,68 +394,18 @@
             All Rights Reserved.
         </p>
     </footer>
+ <!-- Booking Modal -->
+<div id="bookingModal" class="modal">
+    ...
+</div>
 
-    <!-- Booking Modal -->
-    <div id="bookingModal" class="modal">
-        <div class="modal-content">
-            <span class="modal-close">&times;</span>
-            <div class="modal-header">
-                <h2>Book a Consultation</h2>
-                <p>Tell us about your dream wedding, and let's start planning!</p>
-            </div>
-            <form id="bookingForm" class="modal-form">
-                <div class="form-group">
-                    <label for="bookingName">Full Name</label>
-                    <input type="text" id="bookingName" required placeholder="John Doe">
-                </div>
-                <div class="form-group">
-                    <label for="bookingEmail">Email Address</label>
-                    <input type="email" id="bookingEmail" required placeholder="john@example.com">
-                </div>
-                <div class="form-group">
-                    <label for="bookingPhone">Phone Number</label>
-                    <input type="tel" id="bookingPhone" required placeholder="+91 99999 99999">
-                </div>
-                <div class="form-group">
-                    <label for="bookingPackage">Select Package</label>
-                    <select id="bookingPackage" required>
-                        <option value="" disabled selected>Choose a package</option>
-                        <option value="silver">Silver - ₹50,000</option>
-                        <option value="gold">Gold - ₹1,20,000</option>
-                        <option value="platinum">Platinum - ₹2,50,000</option>
-                        <option value="custom">Custom Planning Consultation</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="bookingDate">Tentative Wedding Date</label>
-                    <input type="date" id="bookingDate">
-                </div>
-                <div class="form-group">
-                    <label for="bookingNotes">Additional Details / Requests</label>
-                    <textarea id="bookingNotes" rows="4" placeholder="Any details you'd like to share (theme, venue ideas, etc.)"></textarea>
-                </div>
-                <button type="submit" class="modal-submit-btn">Submit Booking</button>
-            </form>
-        </div>
-    </div>
+<!-- Gallery Lightbox Modal -->
+<div id="lightboxModal" class="modal lightbox-modal">
+    ...
+</div>
 
-    <!-- Gallery Lightbox Modal -->
-    <div id="lightboxModal" class="modal lightbox-modal">
-        <span class="modal-close lightbox-close">&times;</span>
-        <button class="lightbox-prev" aria-label="Previous image"><i class="fas fa-chevron-left"></i></button>
-        <div class="lightbox-content">
-            <img id="lightboxImg" src="" alt="Enlarged Wedding Image">
-            <div id="lightboxCaption" class="lightbox-caption"></div>
-        </div>
-        <button class="lightbox-next" aria-label="Next image"><i class="fas fa-chevron-right"></i></button>
-    </div>
-
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-<script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="script.js"></script>
 
 </body>
-
 </html>
